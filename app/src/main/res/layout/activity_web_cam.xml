@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.edu.ifpb.pdm.miolivc.realcamtime.WebCam">
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="469dp"
+        android:layout_height="581dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="11dp" />
+
+    <TextView
+        android:id="@+id/cameraId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CAM ID"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/yellow"
+        android:textSize="25dip"
+        tools:layout_editor_absoluteX="198dp"
+        tools:layout_editor_absoluteY="35dp" />
+</android.support.constraint.ConstraintLayout>

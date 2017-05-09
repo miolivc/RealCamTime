@@ -16,7 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ConfiguracaoControle"></activity>
+        <activity android:name=".ConfiguracaoControle" />
+        <activity android:name=".WebCam" />
+        <activity android:name=".CamAoVivo" />
+        <activity android:name=".Gravacoes"></activity>
     </application>
 
 </manifest>

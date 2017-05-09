@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.edu.ifpb.pdm.miolivc.realcamtime.CamAoVivo">
+
+    <SurfaceView
+        android:id="@+id/camAoVivo"
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:background="@android:color/darker_gray"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <TextView
+        android:id="@+id/cameraId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CAM ID"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/yellow"
+        android:textSize="25dip"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="40dp" />
+</android.support.constraint.ConstraintLayout>
