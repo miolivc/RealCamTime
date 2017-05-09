@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RealCamTime</string>
+    <string name="button_cam">Iniciar como Camera</string>
+    <string name="button_control">Iniciar como Controle</string>
+    <string name="button_gravar">Gravar por 1 minuto</string>
+    <string name="button_assistir">Assistir ao Vivo</string>
+</resources>
