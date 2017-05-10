@@ -14,7 +14,6 @@ public class ConfiguracaoControle extends AppCompatActivity {
         setContentView(R.layout.activity_configuracao_controle);
 
         Button iniciarGravacao = (Button) findViewById(R.id.gravar);
-
         iniciarGravacao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -24,7 +23,6 @@ public class ConfiguracaoControle extends AppCompatActivity {
         });
 
         Button verGravacoes = (Button) findViewById(R.id.verGravacoes);
-
         verGravacoes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,11 +32,11 @@ public class ConfiguracaoControle extends AppCompatActivity {
         });
 
         Button assistirAoVivo = (Button) findViewById(R.id.assistirAoVivo);
-
         assistirAoVivo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ConfiguracaoControle.this, CamAoVivo.class);
+                startActivity(intent);
             }
         });
     }

@@ -3,6 +3,7 @@ package br.edu.ifpb.pdm.miolivc.realcamtime;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.SurfaceView;
+import android.widget.FrameLayout;
 
 public class CamAoVivo extends AppCompatActivity {
 
@@ -11,7 +12,7 @@ public class CamAoVivo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cam_ao_vivo);
 
-        SurfaceView surfaceView = (SurfaceView) findViewById(R.id.camAoVivo);
+        FrameLayout frameLayout = (FrameLayout) findViewById(R.id.camAoVivo);
 
 
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,7 +15,11 @@
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="@color/white"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="55dp" />
+        tools:layout_editor_absoluteY="55dp"
+        android:layout_above="@+id/codigoCam"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="21dp" />
 
     <TextView
         android:id="@+id/title3"
@@ -28,12 +32,19 @@
         android:textSize="25dip"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/description3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:id="@+id/codigoCam"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/gravar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="39dp"
         android:ems="10"
         android:fontFamily="sans-serif"
         android:inputType="text"
@@ -54,7 +65,11 @@
         android:textColor="@android:color/black"
         android:textSize="18sp"
         tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="295dp" />
+        tools:layout_editor_absoluteY="295dp"
+        android:layout_above="@+id/assistirAoVivo"
+        android:layout_alignLeft="@+id/assistirAoVivo"
+        android:layout_alignStart="@+id/assistirAoVivo"
+        android:layout_marginBottom="27dp" />
 
     <Button
         android:id="@+id/assistirAoVivo"
@@ -66,7 +81,10 @@
         android:textColor="@android:color/black"
         android:textSize="18sp"
         tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="397dp" />
+        tools:layout_editor_absoluteY="397dp"
+        android:layout_marginBottom="39dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/gravar"
@@ -78,5 +96,9 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="192dp" />
-</android.support.constraint.ConstraintLayout>
+        tools:layout_editor_absoluteY="192dp"
+        android:layout_above="@+id/verGravacoes"
+        android:layout_alignLeft="@+id/verGravacoes"
+        android:layout_alignStart="@+id/verGravacoes"
+        android:layout_marginBottom="27dp" />
+</RelativeLayout>

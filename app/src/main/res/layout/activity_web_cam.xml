@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     tools:context="br.edu.ifpb.pdm.miolivc.realcamtime.WebCam">
 
-    <SurfaceView
-        android:id="@+id/surfaceView"
-        android:layout_width="469dp"
-        android:layout_height="581dp"
+    <FrameLayout
+        android:id="@+id/webCamSurface"
+        android:layout_width="367dp"
+        android:layout_height="501dp"
         android:background="@android:color/darker_gray"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="11dp" />
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="5dp" />
 
     <TextView
         android:id="@+id/cameraId"
@@ -23,6 +23,6 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/yellow"
         android:textSize="25dip"
-        tools:layout_editor_absoluteX="198dp"
-        tools:layout_editor_absoluteY="35dp" />
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="43dp" />
 </android.support.constraint.ConstraintLayout>
