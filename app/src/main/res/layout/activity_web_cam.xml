@@ -8,12 +8,12 @@
 
     <FrameLayout
         android:id="@+id/webCamSurface"
-        android:layout_width="367dp"
-        android:layout_height="501dp"
+        android:layout_width="371dp"
+        android:layout_height="488dp"
         android:background="@android:color/darker_gray"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="5dp" />
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
 
     <TextView
         android:id="@+id/cameraId"

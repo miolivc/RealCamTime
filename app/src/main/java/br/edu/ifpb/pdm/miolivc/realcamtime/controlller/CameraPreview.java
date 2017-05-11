@@ -2,14 +2,17 @@ package br.edu.ifpb.pdm.miolivc.realcamtime.controlller;
 
 import android.content.Context;
 import android.hardware.Camera;
+import android.media.CamcorderProfile;
 import android.media.MediaRecorder;
 import android.os.AsyncTask;
+import android.os.Environment;
 import android.util.Log;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.io.IOException;
 
 public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback {
@@ -60,23 +63,43 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     }
 
 
-
-
-    public void gravarVideo(){
+    public void gravarVideo() {
 
         MediaRecorder mediaRecorder = new MediaRecorder();
 
         camera.unlock();
+        //
         mediaRecorder.setCamera(camera);
+
+        Log.e("asasas", "asssou pelac criacao do media");
 
         mediaRecorder.setAudioSource(MediaRecorder.AudioSource.CAMCORDER);
         mediaRecorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);
-        mediaRecorder.setMaxDuration(10000);
+        mediaRecorder.setProfile(CamcorderProfile.get(CamcorderProfile.QUALITY_HIGH));
+        //mediaRecorder.setMaxDuration(10000);
+        //
+//        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "video.mp4");
+//        try {
+//            file.createNewFile();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        mediaRecorder.setOutputFile(file.getAbsolutePath());
+        mediaRecorder.setOutputFile(getOutputMediaFile(MEDIA_TYPE_VIDEO).toString());
+        //
+        Log.e("iosd", "setou properties");
 
-        mediaRecorder.setPreviewDisplay(CameraPreview.this.getHolder().getSurface());
+        //mediaRecorder.setPreviewDisplay(CameraPreview.this.getHolder().getSurface());
 
-        
+        Log.e("miolivc", "recuperou surface");
+        //
+        try {
+            mediaRecorder.prepare();
+        } catch (IOException e) {
+           Log.e("AGDebug", "Erro na camera", e);
+        }
+        //
+        mediaRecorder.start();
 
     }
-
 }
