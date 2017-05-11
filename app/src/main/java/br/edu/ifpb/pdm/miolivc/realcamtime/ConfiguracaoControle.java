@@ -18,6 +18,7 @@ public class ConfiguracaoControle extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ConfiguracaoControle.this, WebCam.class);
+                intent.putExtra("gravar", true);
                 startActivity(intent);
             }
         });

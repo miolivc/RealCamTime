@@ -2,9 +2,13 @@ package br.edu.ifpb.pdm.miolivc.realcamtime.controlller;
 
 import android.content.Context;
 import android.hardware.Camera;
+import android.media.MediaRecorder;
+import android.os.AsyncTask;
 import android.util.Log;
+import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.widget.Toast;
 
 import java.io.IOException;
 
@@ -53,6 +57,26 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         } catch (Exception e){
             Log.d("miolivc", "Error starting camera preview: " + e.getMessage());
         }
+    }
+
+
+
+
+    public void gravarVideo(){
+
+        MediaRecorder mediaRecorder = new MediaRecorder();
+
+        camera.unlock();
+        mediaRecorder.setCamera(camera);
+
+        mediaRecorder.setAudioSource(MediaRecorder.AudioSource.CAMCORDER);
+        mediaRecorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);
+        mediaRecorder.setMaxDuration(10000);
+
+        mediaRecorder.setPreviewDisplay(CameraPreview.this.getHolder().getSurface());
+
+        
+
     }
 
 }
